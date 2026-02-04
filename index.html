@@ -8,48 +8,167 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Ortak Stil -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: linear-gradient(135deg, #020617, #020b2e, #020617);
+      color: #e5e7eb;
+    }
+
+    /* HEADER */
+    header {
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(2,6,23,0.9);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header strong {
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: #38bdf8;
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #e5e7eb;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 140px 48px 120px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      color: #ffffff;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 720px;
+      color: #cbd5f5;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 80px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #38bdf8;
+      box-shadow: 0 20px 40px rgba(56,189,248,0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 20px;
+      color: #38bdf8;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #d1d5f0;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 48px 20px;
+      margin-top: 120px;
+      font-size: 14px;
+      color: #9ca3af;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="header">
-  <div class="logo">RAN TEKNOLOJİ</div>
-  <nav class="nav">
-    <a href="index.html">Ana Sayfa</a>
-    <a href="kurumsal.html">Kurumsal</a>
-    <a href="faaliyet.html">Faaliyet Alanları</a>
-    <a href="projeler.html">Projeler</a>
-  </nav>
-</header>
+  <header>
+    <strong>RAN TEKNOLOJİ</strong>
+    <nav>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="kurumsal.html">Kurumsal</a>
+      <a href="faaliyet.html">Faaliyet Alanları</a>
+      <a href="projeler.html">Projeler</a>
+    </nav>
+  </header>
 
-<section class="hero">
-  <h1>Kurumsal Web Sitesi</h1>
-  <p>
-    RAN Teknoloji; yenilikçi, güvenilir ve sürdürülebilir teknoloji çözümleri
-    geliştirerek işletmelerin dijital dönüşümüne güç katar.
-  </p>
+  <section class="hero">
+    <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
+    <p>
+      RAN Teknoloji; yenilikçi, güvenilir ve sürdürülebilir teknoloji çözümleri geliştirerek
+      işletmelerin dijital dönüşümüne güç katar.
+    </p>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Yazılım & Dijital</h3>
-      <p>Modern, ölçeklenebilir ve güvenli yazılım çözümleri.</p>
-    </div>
-    <div class="card">
-      <h3>Teknoloji Danışmanlığı</h3>
-      <p>İş süreçlerinizi teknolojiyle optimize ediyoruz.</p>
-    </div>
-    <div class="card">
-      <h3>Kurumsal IT</h3>
-      <p>Altyapı, entegrasyon ve kurumsal sistem çözümleri.</p>
-    </div>
-  </div>
-</section>
+    <div class="services">
+      <div class="card">
+        <h3>Yazılım & Dijital</h3>
+        <p>
+          Modern, ölçeklenebilir ve güvenli yazılım çözümleri ile
+          işinizi geleceğe taşıyoruz.
+        </p>
+      </div>
 
-<footer class="footer">
-  © 2026 RAN Teknoloji
-</footer>
+      <div class="card">
+        <h3>Teknoloji Danışmanlığı</h3>
+        <p>
+          İş süreçlerinizi analiz eder, teknolojiyle optimize eder
+          ve verimliliği artırırız.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Kurumsal IT</h3>
+        <p>
+          Altyapı, entegrasyon ve kurumsal sistem çözümleriyle
+          uçtan uca destek sağlarız.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 RAN Teknoloji
+  </footer>
 
 </body>
 </html>
