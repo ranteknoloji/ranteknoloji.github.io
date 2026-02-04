@@ -9,182 +9,184 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg-dark: #050b1d;
-      --bg-mid: #081633;
-      --card-bg: rgba(255,255,255,0.06);
-      --accent: #3da9fc;
-      --text-main: #ffffff;
-      --text-soft: #cfd8ff;
-      --border-soft: rgba(255,255,255,0.12);
-    }
-
     * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: 'Inter', Arial, sans-serif;
-      background: radial-gradient(circle at top, #0b1d4a 0%, var(--bg-dark) 70%);
-      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #0b1a3a 0%, #050914 70%);
+      color: #ffffff;
     }
 
+    /* HEADER */
     header {
-      padding: 28px 48px;
+      padding: 24px 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--border-soft);
-      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      background: linear-gradient(180deg, rgba(5,9,20,0.9), rgba(5,9,20,0.7));
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     header strong {
-      font-size: 18px;
+      color: #4da3ff;
       letter-spacing: 1px;
-      color: var(--accent);
+      font-size: 18px;
     }
 
     nav a {
       margin-left: 24px;
       text-decoration: none;
-      color: var(--text-soft);
+      color: #e0e6f0;
       font-weight: 500;
-      transition: color .3s;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      color: var(--accent);
+      color: #4da3ff;
     }
 
+    /* HERO */
     main {
-      padding: 140px 48px 100px;
       max-width: 1200px;
       margin: auto;
+      padding: 140px 40px 120px;
     }
 
     h1 {
-      font-size: 56px;
-      line-height: 1.15;
+      font-size: 52px;
+      line-height: 1.2;
       margin-bottom: 24px;
     }
 
     p.hero-text {
-      font-size: 19px;
+      font-size: 18px;
+      color: #c7d2f0;
+      max-width: 650px;
       line-height: 1.7;
-      color: var(--text-soft);
-      max-width: 720px;
-      margin-bottom: 48px;
     }
 
+    /* CARDS */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-      margin-top: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 80px;
     }
 
     .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-soft);
-      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
       padding: 32px;
       backdrop-filter: blur(12px);
-      transition: transform .35s ease, box-shadow .35s ease;
+      transition: all 0.4s ease;
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+      transform: translateY(-6px);
+      border-color: rgba(77,163,255,0.6);
+      box-shadow: 0 0 40px rgba(77,163,255,0.15);
     }
 
     .card h3 {
-      margin-top: 0;
+      color: #4da3ff;
       margin-bottom: 12px;
-      font-size: 20px;
-      color: var(--accent);
     }
 
     .card p {
-      margin: 0;
-      font-size: 15.5px;
+      color: #cfd8ff;
+      font-size: 15px;
       line-height: 1.6;
-      color: var(--text-soft);
     }
 
+    /* FOOTER */
     footer {
-      margin-top: 120px;
-      padding: 48px;
       text-align: center;
+      padding: 30px;
       font-size: 14px;
-      color: #9aa4d1;
-      border-top: 1px solid var(--border-soft);
+      color: #8fa1d6;
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 40px;
-      }
-      header {
-        padding: 20px 28px;
-      }
-      main {
-        padding: 100px 28px;
-      }
+    /* CONTACT BAR */
+    .contact-bar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(5,9,20,0.95);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 14px;
+      z-index: 20;
+    }
+
+    .contact-bar a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .contact-bar a:hover {
+      color: #4da3ff;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <strong>RAN TEKNOLOJİ</strong>
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="kurumsal.html">Kurumsal</a>
-      <a href="faaliyet.html">Faaliyet Alanları</a>
-      <a href="projeler.html">Projeler</a>
-    </nav>
-  </header>
+<header>
+  <strong>RAN TEKNOLOJİ</strong>
+  <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="kurumsal.html">Kurumsal</a>
+    <a href="faaliyet.html">Faaliyet Alanları</a>
+    <a href="projeler.html">Projeler</a>
+  </nav>
+</header>
 
-  <main>
-    <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
+<main>
+  <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
+  <p class="hero-text">
+    RAN Teknoloji; yenilikçi, güvenilir ve sürdürülebilir teknoloji çözümleri geliştirerek
+    işletmelerin dijital dönüşümüne güç katar.
+  </p>
 
-    <p class="hero-text">
-      RAN Teknoloji; yenilikçi, güvenilir ve sürdürülebilir teknoloji çözümleri geliştirerek
-      işletmelerin dijital dönüşümüne gerçek değer katar.
-    </p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Yazılım & Dijital</h3>
-        <p>
-          Modern, ölçeklenebilir ve güvenli yazılım çözümleriyle işinizi
-          geleceğe taşıyoruz.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Teknoloji Danışmanlığı</h3>
-        <p>
-          İş süreçlerinizi analiz eder, teknolojiyle optimize eder ve
-          verimliliği artırırız.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Kurumsal IT</h3>
-        <p>
-          Altyapı, entegrasyon ve kurumsal sistem çözümleriyle
-          uçtan uca destek sağlarız.
-        </p>
-      </div>
+  <div class="cards">
+    <div class="card">
+      <h3>Yazılım & Dijital</h3>
+      <p>Modern, ölçeklenebilir ve güvenli yazılım çözümleriyle işinizi geleceğe taşıyoruz.</p>
     </div>
-  </main>
 
-  <footer>
-    © 2026 RAN Teknoloji
-  </footer>
+    <div class="card">
+      <h3>Teknoloji Danışmanlığı</h3>
+      <p>İş süreçlerinizi analiz eder, teknolojiyle optimize eder ve verimliliği artırırız.</p>
+    </div>
+
+    <div class="card">
+      <h3>Kurumsal IT</h3>
+      <p>Altyapı, entegrasyon ve kurumsal sistem çözümleriyle uçtan uca destek sağlarız.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2026 RAN Teknoloji
+</footer>
+
+<div class="contact-bar">
+  <a href="https://wa.me/905XXXXXXXXX" target="_blank">WhatsApp</a>
+  <a href="https://instagram.com/ranteknoloji" target="_blank">Instagram</a>
+  <a href="tel:+905XXXXXXXXX">📞 05XX XXX XX XX</a>
+</div>
 
 </body>
 </html>
