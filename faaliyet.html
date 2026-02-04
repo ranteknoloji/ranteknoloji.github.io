@@ -4,49 +4,22 @@
   <meta charset="UTF-8">
   <title>Faaliyet Alanları | RAN Teknoloji</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      background: #ffffff;
-    }
-
-    header {
-      padding: 30px 40px;
-      border-bottom: 1px solid #e5e5e5;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #222;
-      font-weight: 500;
-    }
-
-    main {
-      padding: 100px 40px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 36px;
-      margin-bottom: 30px;
-    }
-
-    ul {
-      font-size: 18px;
-      line-height: 1.8;
-      color: #444;
-    }
+    body{margin:0;font-family:Inter,Arial;background:#020617;color:#e5e7eb}
+    header{padding:24px 48px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.08)}
+    header strong{color:#38bdf8}
+    nav a{margin-left:24px;color:#e5e7eb;text-decoration:none}
+    nav a:hover{color:#38bdf8}
+    main{max-width:1100px;margin:auto;padding:100px 48px}
+    h1{font-size:42px;margin-bottom:24px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;margin-top:60px}
+    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:28px;border-radius:14px}
+    .card h3{color:#38bdf8}
+    .card p{color:#cbd5f5;line-height:1.6}
+    footer{text-align:center;padding:40px;border-top:1px solid rgba(255,255,255,.08);color:#9ca3af}
   </style>
 </head>
-
 <body>
 
 <header>
@@ -55,18 +28,36 @@
     <a href="index.html">Ana Sayfa</a>
     <a href="kurumsal.html">Kurumsal</a>
     <a href="faaliyet.html">Faaliyet Alanları</a>
+    <a href="projeler.html">Projeler</a>
   </nav>
 </header>
 
 <main>
   <h1>Faaliyet Alanlarımız</h1>
-  <ul>
-    <li>Yazılım ve Dijital Çözümler</li>
-    <li>Teknoloji Danışmanlığı</li>
-    <li>Sistem Entegrasyonu</li>
-    <li>Kurumsal IT Çözümleri</li>
-  </ul>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Yazılım Geliştirme</h3>
+      <p>Kurumsal web, özel yazılım ve dijital platform çözümleri.</p>
+    </div>
+    <div class="card">
+      <h3>Teknoloji Danışmanlığı</h3>
+      <p>İş süreçleri, dijital dönüşüm ve BT stratejileri.</p>
+    </div>
+    <div class="card">
+      <h3>Kurumsal IT Çözümleri</h3>
+      <p>Altyapı, entegrasyon ve sistem yönetimi hizmetleri.</p>
+    </div>
+    <div class="card">
+      <h3>Dijital Çözümler</h3>
+      <p>Verimlilik, otomasyon ve dijitalleşme projeleri.</p>
+    </div>
+  </div>
 </main>
+
+<footer>
+  © 2026 RAN Teknoloji
+</footer>
 
 </body>
 </html>
