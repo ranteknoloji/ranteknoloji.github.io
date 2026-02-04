@@ -4,16 +4,19 @@
 <meta charset="UTF-8">
 <title>RAN Teknoloji</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:Inter,Arial;
   background:#020617;
   color:#e5e7eb;
-  transition:opacity .3s ease;
+  opacity:0;
+  animation:fadeIn .4s ease forwards;
 }
+@keyframes fadeIn{to{opacity:1}}
+
 header{
   height:80px;
   padding:0 40px;
@@ -22,12 +25,9 @@ header{
   align-items:center;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
-header strong{color:#38bdf8;letter-spacing:.5px}
+header strong{color:#38bdf8}
 nav a{margin-left:24px;color:#e5e7eb;text-decoration:none}
 nav a:hover{color:#38bdf8}
-
-.page{animation:fade .6s ease forwards}
-@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 
 .hero{
   min-height:calc(100vh - 80px);
@@ -36,7 +36,7 @@ nav a:hover{color:#38bdf8}
 }
 .hero-inner{max-width:1100px;margin:auto}
 h1{font-size:46px;margin-bottom:20px}
-.hero p{max-width:720px;color:#cbd5f5;font-size:18px;line-height:1.7}
+.hero p{max-width:700px;color:#cbd5f5;font-size:18px;line-height:1.7}
 
 .cards{
   margin-top:60px;
@@ -49,9 +49,7 @@ h1{font-size:46px;margin-bottom:20px}
   border:1px solid rgba(255,255,255,.08);
   border-radius:14px;
   padding:24px;
-  transition:.3s
 }
-.card:hover{transform:translateY(-6px);border-color:#38bdf8}
 .card h3{color:#38bdf8;margin-bottom:10px}
 .card p{color:#d1d5f0;font-size:15px;line-height:1.6}
 
@@ -65,6 +63,7 @@ footer{
 </head>
 
 <body>
+
 <header>
   <strong>RAN TEKNOLOJİ</strong>
   <nav>
@@ -75,34 +74,32 @@ footer{
   </nav>
 </header>
 
-<div class="page">
 <section class="hero">
   <div class="hero-inner">
     <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
-    <p>RAN Teknoloji, işletmelerin dijital dönüşüm süreçlerinde güvenilir ve sürdürülebilir çözümler sunar.</p>
+    <p>
+      RAN Teknoloji; işletmeler için güvenilir, sürdürülebilir ve
+      stratejik teknoloji çözümleri sunar.
+    </p>
 
     <div class="cards">
-      <div class="card"><h3>Yazılım & Dijital</h3><p>Modern ve ölçeklenebilir yazılım çözümleri.</p></div>
-      <div class="card"><h3>Teknoloji Danışmanlığı</h3><p>Dijital dönüşüm ve BT stratejileri.</p></div>
-      <div class="card"><h3>Kurumsal IT</h3><p>Altyapı ve entegrasyon çözümleri.</p></div>
+      <div class="card">
+        <h3>Yazılım & Dijital</h3>
+        <p>Özel yazılım ve modern web çözümleri.</p>
+      </div>
+      <div class="card">
+        <h3>Teknoloji Danışmanlığı</h3>
+        <p>Dijital dönüşüm ve BT stratejileri.</p>
+      </div>
+      <div class="card">
+        <h3>Kurumsal IT</h3>
+        <p>Altyapı ve sistem entegrasyonları.</p>
+      </div>
     </div>
   </div>
 </section>
-</div>
 
 <footer>© 2026 RAN Teknoloji</footer>
 
-<script>
-document.querySelectorAll("a").forEach(link=>{
-  link.addEventListener("click",e=>{
-    const h=link.getAttribute("href");
-    if(h&&h.endsWith(".html")){
-      e.preventDefault();
-      document.body.style.opacity="0";
-      setTimeout(()=>location.href=h,200);
-    }
-  });
-});
-</script>
 </body>
 </html>
