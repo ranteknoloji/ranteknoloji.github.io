@@ -12,6 +12,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 
+/* GENEL */
 body{
   font-family:Inter,Arial,sans-serif;
   background:#050914;
@@ -21,11 +22,15 @@ body{
 
 /* HEADER */
 header{
-  position:sticky;top:0;z-index:1000;
+  position:sticky;
+  top:0;
+  z-index:1000;
   background:rgba(5,9,20,.95);
   backdrop-filter:blur(10px);
   padding:20px 80px;
-  display:flex;justify-content:space-between;align-items:center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 header strong{
@@ -36,25 +41,47 @@ nav a{
   color:#cbd5f5;
   margin-left:30px;
   text-decoration:none;
+  font-weight:500;
 }
 nav a:hover{color:#38bdf8}
 
 /* SECTION */
-section{padding:120px 80px}
-.container{max-width:1400px;margin:auto}
+section{
+  width:100%;
+  padding:120px 80px;
+}
+.container{
+  max-width:1400px;
+  margin:auto;
+}
 
 /* HERO */
 .hero{
   background:radial-gradient(ellipse at top,#0b1b3a 0%,#050914 70%);
 }
-.hero h1{font-size:56px;margin-bottom:25px}
-.hero p{font-size:20px;color:#cbd5f5;max-width:800px}
+.hero h1{
+  font-size:56px;
+  max-width:900px;
+  margin-bottom:25px;
+}
+.hero p{
+  font-size:20px;
+  max-width:800px;
+  color:#cbd5f5;
+}
 
-/* TITLES */
-.section-title{font-size:42px;margin-bottom:20px}
-.section-desc{font-size:18px;color:#cbd5f5;max-width:900px}
+/* BAŞLIKLAR */
+.section-title{
+  font-size:42px;
+  margin-bottom:20px;
+}
+.section-desc{
+  max-width:900px;
+  font-size:18px;
+  color:#cbd5f5;
+}
 
-/* GRID */
+/* GRID & CARD */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -77,8 +104,10 @@ section{padding:120px 80px}
   margin-bottom:15px;
 }
 
-/* ALT */
-.alt{background:#070c1e}
+/* ALT ARKA PLAN */
+.alt{
+  background:#070c1e;
+}
 
 /* FOOTER */
 footer{
@@ -136,10 +165,10 @@ footer p{
   border-radius:50%;
   background:#38bdf8;
   color:#050914;
+  font-size:26px;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:26px;
   cursor:pointer;
   z-index:1000;
 }
@@ -200,6 +229,133 @@ footer p{
   <a href="tel:+905439594404"><i class="fas fa-phone"></i></a>
   <a href="mailto:info@ranteknoloji.com"><i class="fas fa-envelope"></i></a>
 </div>
+
+<!-- ANA SAYFA -->
+<section id="anasayfa" class="hero">
+  <div class="container">
+    <h1>Dijital Dönüşümde Güvenilir<br>Teknoloji Ortağınız</h1>
+    <p>
+      RAN Teknoloji; yazılım, danışmanlık ve kurumsal IT çözümleriyle
+      işletmelerin dijital geleceğini planlar, geliştirir ve yönetir.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Yazılım & Dijital</h3>
+        <p>Web, mobil ve özel yazılım projeleriyle markaları dijital dünyada güçlendiriyoruz.</p>
+      </div>
+      <div class="card">
+        <h3>Teknoloji Danışmanlığı</h3>
+        <p>Dijital dönüşüm, BT stratejisi ve süreç iyileştirme hizmetleri sunuyoruz.</p>
+      </div>
+      <div class="card">
+        <h3>Kurumsal IT</h3>
+        <p>Altyapı, güvenlik, sistem yönetimi ve entegrasyon çözümleri sağlıyoruz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KURUMSAL -->
+<section id="kurumsal" class="alt">
+  <div class="container">
+    <h2 class="section-title">Biz Kimiz?</h2>
+    <p class="section-desc">
+      Teknolojiyi sadece bir araç değil, kurumsal başarının temel yapı taşı olarak görüyoruz.
+      Bugünü çözerken yarını planlayan, sürdürülebilir sistemler kuruyoruz.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Vizyon</h3>
+        <p>Teknolojiyi gerçek değer üreten çözümlere dönüştürmek.</p>
+      </div>
+      <div class="card">
+        <h3>Misyon</h3>
+        <p>Kurumsal firmalar için güvenilir ve ölçeklenebilir çözümler üretmek.</p>
+      </div>
+      <div class="card">
+        <h3>Değerler</h3>
+        <p>Güven, şeffaflık, kalite ve sürdürülebilirlik.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HİZMETLER -->
+<section id="hizmetler">
+  <div class="container">
+    <h2 class="section-title">Hizmetlerimiz</h2>
+    <p class="section-desc">
+      Uçtan uca teknoloji çözümleriyle iş süreçlerinizi güçlendiriyoruz.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Kurumsal Web Siteleri</h3>
+        <p>Markaya özel, hızlı ve güvenli web çözümleri.</p>
+      </div>
+      <div class="card">
+        <h3>Dijital Dönüşüm</h3>
+        <p>İş süreçlerini teknolojiyle optimize eden projeler.</p>
+      </div>
+      <div class="card">
+        <h3>IT Altyapı</h3>
+        <p>Sunucu, ağ, güvenlik ve sistem yönetimi hizmetleri.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJELER -->
+<section id="projeler" class="alt">
+  <div class="container">
+    <h2 class="section-title">Projeler</h2>
+    <p class="section-desc">
+      Farklı sektörlerde hayata geçirdiğimiz seçili projeler.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Kurumsal Web Platformu</h3>
+        <p>Ölçeklenebilir, performans odaklı web altyapıları.</p>
+      </div>
+      <div class="card">
+        <h3>Dijital Yönetim Sistemleri</h3>
+        <p>Operasyonel verimliliği artıran özel yazılımlar.</p>
+      </div>
+      <div class="card">
+        <h3>IT Altyapı Kurulumu</h3>
+        <p>Uçtan uca sistem ve ağ çözümleri.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- İLETİŞİM -->
+<section id="iletisim">
+  <div class="container">
+    <h2 class="section-title">Başvuru Formu</h2>
+    <p class="section-desc">
+      Aşağıdaki formu doldurarak başvurunuzu iletebilirsiniz.
+    </p>
+
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfExTcyd_sNWISGLsMTUoJ3IlZF_jKU06n19n1EXnAqpYlJ1g/viewform?embedded=true"
+      width="100%"
+      height="1000"
+      frameborder="0">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <a href="#anasayfa">Ana Sayfa</a>
+  <a href="#kurumsal">Kurumsal</a>
+  <a href="#hizmetler">Hizmetler</a>
+  <a href="#projeler">Projeler</a>
+  <p>© 2026 RAN Teknoloji</p>
+</footer>
 
 <!-- DİJİTAL ASİSTAN -->
 <div id="assistant">
