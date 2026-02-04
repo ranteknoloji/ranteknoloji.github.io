@@ -18,36 +18,32 @@ body{
 
 /* HEADER */
 header{
-  position:fixed;
-  top:0;left:0;right:0;
-  padding:20px 60px;
+  position:sticky;
+  top:0;
+  padding:18px 50px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   background:#020617;
   border-bottom:1px solid rgba(255,255,255,.08);
-  z-index:100;
+  z-index:10;
 }
 header strong{color:#38bdf8;font-size:18px}
 nav a{
-  margin-left:25px;
+  margin-left:20px;
   color:#fff;
   text-decoration:none;
-  font-size:15px;
+  font-size:14px;
 }
 nav a:hover{color:#38bdf8}
 
 /* SECTIONS */
 section{
-  min-height:100vh;
-  padding:140px 60px;
-  display:flex;
-  align-items:center;
+  padding:80px 50px; /* BOŞLUK AZALTILDI */
 }
 .container{
   max-width:1200px;
   margin:auto;
-  width:100%;
 }
 
 /* HERO */
@@ -55,47 +51,44 @@ section{
   background:linear-gradient(135deg,#020617,#0b1d4a);
 }
 .hero h1{
-  font-size:56px;
-  margin-bottom:20px;
+  font-size:46px;
+  margin-bottom:15px;
 }
 .hero p{
-  font-size:18px;
+  font-size:17px;
   color:#cbd5f5;
-  max-width:750px;
+  max-width:800px;
 }
 
 /* SERVICES */
-.services{
-  background:#020617;
-}
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-  margin-top:50px;
+  gap:25px;
+  margin-top:40px;
 }
 .card{
   background:rgba(255,255,255,.04);
   border:1px solid rgba(255,255,255,.08);
-  border-radius:18px;
-  padding:35px;
+  border-radius:16px;
+  padding:30px;
 }
-.card h3{color:#38bdf8;margin-bottom:15px}
-.card p{color:#cbd5f5;font-size:16px;line-height:1.6}
+.card h3{color:#38bdf8;margin-bottom:10px}
+.card p{color:#cbd5f5;font-size:15px;line-height:1.6}
 
 /* ABOUT */
 .about{
-  background:linear-gradient(135deg,#020617,#020617,#0b1d4a);
+  background:#020617;
 }
 .about h2{
-  font-size:42px;
-  margin-bottom:20px;
+  font-size:36px;
+  margin-bottom:15px;
 }
 .about p{
-  font-size:18px;
+  font-size:17px;
   color:#cbd5f5;
   max-width:900px;
-  line-height:1.8;
+  line-height:1.7;
 }
 
 /* PROJECTS */
@@ -103,32 +96,31 @@ section{
   background:#020617;
 }
 .projects h2{
-  font-size:42px;
-  margin-bottom:40px;
+  font-size:36px;
+  margin-bottom:30px;
 }
 .project-list{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:30px;
+  gap:25px;
 }
 .project{
-  padding:30px;
-  border-radius:16px;
+  padding:25px;
+  border-radius:14px;
   background:rgba(255,255,255,.03);
   border:1px solid rgba(255,255,255,.08);
 }
-.project h4{color:#38bdf8;margin-bottom:10px}
-.project p{color:#cbd5f5;font-size:15px}
+.project h4{color:#38bdf8;margin-bottom:8px}
+.project p{color:#cbd5f5;font-size:14px}
 
 /* FOOTER */
 footer{
-  padding:50px;
+  padding:35px;
   text-align:center;
   border-top:1px solid rgba(255,255,255,.08);
-  background:#020617;
 }
-footer p{color:#94a3b8;font-size:14px}
-footer span{margin:0 15px;color:#38bdf8}
+footer p{color:#94a3b8;font-size:13px}
+footer span{margin:0 12px;color:#38bdf8}
 </style>
 </head>
 
@@ -146,37 +138,28 @@ footer span{margin:0 15px;color:#38bdf8}
 
 <section class="hero">
   <div class="container">
-    <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
+    <h1>Dijital Dönüşümde Güvenilir Teknoloji Ortağınız</h1>
     <p>
       RAN Teknoloji; yazılım, danışmanlık ve kurumsal IT çözümleriyle
-      işletmelerin dijital geleceğini planlar, geliştirir ve yönetir.
+      işletmelerin dijital süreçlerini güçlendirir.
     </p>
   </div>
 </section>
 
-<section class="services">
+<section>
   <div class="container">
     <div class="cards">
       <div class="card">
         <h3>Yazılım & Dijital</h3>
-        <p>
-          Web ve mobil uygulamalar, özel yazılım projeleri, kullanıcı deneyimi
-          odaklı modern dijital çözümler geliştiriyoruz.
-        </p>
+        <p>Web, mobil ve özel yazılım projeleri geliştiriyoruz.</p>
       </div>
       <div class="card">
         <h3>Teknoloji Danışmanlığı</h3>
-        <p>
-          Dijital dönüşüm, BT stratejileri, süreç analizi ve teknoloji yol
-          haritası oluşturma hizmetleri sunuyoruz.
-        </p>
+        <p>Dijital dönüşüm ve BT stratejileri oluşturuyoruz.</p>
       </div>
       <div class="card">
         <h3>Kurumsal IT</h3>
-        <p>
-          Altyapı kurulumu, sistem entegrasyonu, güvenlik ve kurumsal BT
-          yönetimi alanlarında uçtan uca destek sağlıyoruz.
-        </p>
+        <p>Altyapı, entegrasyon ve sistem yönetimi çözümleri.</p>
       </div>
     </div>
   </div>
@@ -186,28 +169,27 @@ footer span{margin:0 15px;color:#38bdf8}
   <div class="container">
     <h2>Kurumsal Yaklaşımımız</h2>
     <p>
-      RAN Teknoloji; sürdürülebilirlik, güvenilirlik ve yenilikçilik ilkeleriyle
-      hareket eder. İş ortaklarının ihtiyaçlarını analiz eder, doğru teknolojiyi
-      doğru stratejiyle birleştirerek uzun vadeli değer üretir.
+      Güvenilir, sürdürülebilir ve ölçeklenebilir teknoloji çözümleriyle
+      iş ortaklarımıza uzun vadeli değer üretiriz.
     </p>
   </div>
 </section>
 
 <section class="projects">
   <div class="container">
-    <h2>Projeler & Çözümler</h2>
+    <h2>Projeler</h2>
     <div class="project-list">
       <div class="project">
-        <h4>Kurumsal Web Projeleri</h4>
-        <p>Marka kimliğine uygun, hızlı ve güvenli web çözümleri.</p>
+        <h4>Kurumsal Web Siteleri</h4>
+        <p>Markaya özel, hızlı ve güvenli web çözümleri.</p>
       </div>
       <div class="project">
-        <h4>Dijital Dönüşüm</h4>
-        <p>İş süreçlerini teknolojiyle optimize eden projeler.</p>
+        <h4>Dijital Dönüşüm Projeleri</h4>
+        <p>İş süreçlerini teknolojiyle optimize eden çözümler.</p>
       </div>
       <div class="project">
-        <h4>IT Altyapı Çözümleri</h4>
-        <p>Kurumsal sistem kurulumları ve entegrasyon projeleri.</p>
+        <h4>IT Altyapı Kurulumları</h4>
+        <p>Kurumsal sistemler için uçtan uca destek.</p>
       </div>
     </div>
   </div>
