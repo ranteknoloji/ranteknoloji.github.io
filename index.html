@@ -7,83 +7,113 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-  margin:0;
   font-family:'Inter',sans-serif;
-  background:linear-gradient(160deg,#020617,#020b2a,#01040f);
+  background:#020617;
   color:#fff;
 }
 header{
-  padding:25px 40px;
+  position:fixed;
+  top:0;left:0;right:0;
+  padding:25px 50px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom:1px solid rgba(255,255,255,.08);
+  background:rgba(2,6,23,.85);
+  backdrop-filter:blur(10px);
+  z-index:100;
 }
 header strong{color:#3ea6ff}
 nav a{
+  margin-left:25px;
   color:#fff;
-  margin-left:20px;
   text-decoration:none;
   font-size:15px;
 }
 nav a:hover{color:#3ea6ff}
 
-.hero{
-  padding:100px 40px 80px;
+section{
+  min-height:100vh;
+  padding:120px 60px;
+  display:flex;
+  align-items:center;
+}
+.container{
   max-width:1200px;
   margin:auto;
-}
-.hero h1{
-  font-size:52px;
-  line-height:1.2;
-}
-.hero p{
-  max-width:650px;
-  color:#cbd5f5;
-  font-size:18px;
+  width:100%;
 }
 
+/* HERO */
+.hero{
+  background:radial-gradient(circle at top,#0b1c4d,#020617);
+}
+.hero h1{
+  font-size:56px;
+  line-height:1.2;
+  margin-bottom:25px;
+}
+.hero p{
+  max-width:700px;
+  font-size:19px;
+  color:#cbd5f5;
+}
+
+/* KURUMSAL */
+.kurumsal{
+  background:#020b2a;
+}
+.kurumsal h2{font-size:42px;margin-bottom:20px}
+.kurumsal p{color:#cbd5f5;font-size:18px;line-height:1.7}
+
+/* FAALİYET */
+.faaliyet{
+  background:#020617;
+}
 .cards{
-  margin-top:70px;
+  margin-top:40px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
 .card{
   background:rgba(255,255,255,.05);
-  padding:25px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.08);
+  padding:30px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.1);
 }
-.card h3{color:#3ea6ff}
+.card h3{color:#3ea6ff;margin-bottom:10px}
+.card p{color:#cbd5f5;font-size:16px}
 
-.section{
-  padding:90px 40px;
-  max-width:1200px;
-  margin:auto;
+/* PROJELER */
+.projeler{
+  background:#020b2a;
 }
-.section h2{
-  font-size:36px;
-  margin-bottom:20px;
+.project{
+  padding:25px 0;
+  border-bottom:1px solid rgba(255,255,255,.1);
 }
-.section p{color:#cbd5f5}
+.project h4{font-size:22px;margin-bottom:8px}
 
+/* İLETİŞİM */
+.iletisim{
+  background:#020617;
+  text-align:center;
+}
+.iletisim h2{font-size:38px;margin-bottom:20px}
+.iletisim p{color:#cbd5f5;margin-bottom:40px}
 .contact{
-  margin-top:80px;
-  padding:35px;
-  border-top:1px solid rgba(255,255,255,.1);
   display:flex;
   justify-content:center;
   gap:40px;
-  font-size:15px;
+  font-size:18px;
+  color:#3ea6ff;
 }
-.contact span{color:#3ea6ff}
 
 footer{
+  padding:20px;
   text-align:center;
-  padding:25px;
   font-size:14px;
   color:#94a3b8;
 }
@@ -102,42 +132,76 @@ footer{
   </nav>
 </header>
 
-<div class="hero">
-  <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
-  <p>
-    RAN Teknoloji; sürdürülebilir, güvenli ve yenilikçi teknoloji çözümleriyle
-    işletmelerin dijital dönüşümünü hızlandırır.
-  </p>
+<section class="hero">
+  <div class="container">
+    <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
+    <p>
+      RAN Teknoloji; işletmeler için yazılım, danışmanlık ve kurumsal IT çözümleri
+      geliştirerek dijital geleceği bugünden inşa eder.
+    </p>
+  </div>
+</section>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Yazılım & Dijital</h3>
-      <p>Modern, ölçeklenebilir ve güvenli yazılım çözümleri.</p>
-    </div>
-    <div class="card">
-      <h3>Teknoloji Danışmanlığı</h3>
-      <p>Dijital dönüşüm stratejileri ve süreç optimizasyonu.</p>
-    </div>
-    <div class="card">
-      <h3>Kurumsal IT</h3>
-      <p>Altyapı, entegrasyon ve sistem yönetimi.</p>
+<section class="kurumsal">
+  <div class="container">
+    <h2>Kurumsal Yaklaşımımız</h2>
+    <p>
+      Güven, sürdürülebilirlik ve yenilik temel değerlerimizdir.
+      Her projede iş ortağımızın ihtiyaçlarını analiz eder,
+      uzun vadeli ve ölçeklenebilir çözümler üretiriz.
+    </p>
+  </div>
+</section>
+
+<section class="faaliyet">
+  <div class="container">
+    <h2>Faaliyet Alanlarımız</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Yazılım & Dijital</h3>
+        <p>Web, mobil ve özel yazılım çözümleri.</p>
+      </div>
+      <div class="card">
+        <h3>Teknoloji Danışmanlığı</h3>
+        <p>Dijital dönüşüm ve BT stratejileri.</p>
+      </div>
+      <div class="card">
+        <h3>Kurumsal IT</h3>
+        <p>Altyapı, entegrasyon ve sistem yönetimi.</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="section">
-  <h2>Neden RAN Teknoloji?</h2>
-  <p>
-    Deneyimli kadromuz, güçlü teknik altyapımız ve çözüm odaklı yaklaşımımızla
-    işletmenizin her aşamasında yanınızdayız.
-  </p>
-</div>
+<section class="projeler">
+  <div class="container">
+    <h2>Projelerimiz</h2>
+    <div class="project">
+      <h4>Kurumsal Web Platformu</h4>
+      <p>Yüksek performanslı ve güvenli web altyapısı.</p>
+    </div>
+    <div class="project">
+      <h4>Dijital Dönüşüm Sistemi</h4>
+      <p>İş süreçlerini uçtan uca dijitalleştiren çözümler.</p>
+    </div>
+    <div class="project">
+      <h4>Özel Yazılım Projesi</h4>
+      <p>Firmaya özel otomasyon ve entegrasyon yazılımları.</p>
+    </div>
+  </div>
+</section>
 
-<div class="contact">
-  <span>WhatsApp</span>
-  <span>Instagram</span>
-  <span>📞 05XX XXX XX XX</span>
-</div>
+<section class="iletisim">
+  <div class="container">
+    <h2>Bizimle İletişime Geçin</h2>
+    <p>Projeleriniz için yanınızdayız.</p>
+    <div class="contact">
+      <span>WhatsApp</span>
+      <span>Instagram</span>
+      <span>📞 05XX XXX XX XX</span>
+    </div>
+  </div>
+</section>
 
 <footer>© 2026 RAN Teknoloji</footer>
 
