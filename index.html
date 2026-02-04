@@ -339,14 +339,18 @@ footer p{
     <p class="section-desc">
       Aşağıdaki formu doldurarak başvurunuzu iletebilirsiniz.
     </p>
+<button class="form-toggle" onclick="toggleForm()">
+  Başvuru Formunu Göster
+</button>
 
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfExTcyd_sNWISGLsMTUoJ3IlZF_jKU06n19n1EXnAqpYlJ1g/viewform?embedded=true"
-      width="100%"
-      height="1000"
-      frameborder="0">
-    </iframe>
-  </div>
+<div id="formArea" style="display:none; margin-top:40px;">
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfExTcyd_sNWISGLsMTUoJ3IlZF_jKU06n19n1EXnAqpYlJ1g/viewform?embedded=true"
+    width="100%"
+    height="1000"
+    frameborder="0">
+  </iframe>
+</div>
 </section>
 <section class="alt" id="iletisim-detay">
   <div class="container">
@@ -402,14 +406,29 @@ footer p{
 
 <script>
 function toggleAssistant(){
-  const a=document.getElementById('assistant');
+  const a = document.getElementById('assistant');
   a.style.display = a.style.display === 'block' ? 'none' : 'block';
 }
+
+function toggleForm(){
+  const form = document.getElementById('formArea');
+  const btn = document.querySelector('.form-toggle');
+
+  if(form.style.display === 'none'){
+    form.style.display = 'block';
+    btn.innerText = 'Başvuru Formunu Gizle';
+  }else{
+    form.style.display = 'none';
+    btn.innerText = 'Başvuru Formunu Göster';
+  }
+}
+
 function goTo(id){
   document.getElementById(id).scrollIntoView({behavior:'smooth'});
   toggleAssistant();
 }
 </script>
+
 
 </body>
 </html>
