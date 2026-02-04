@@ -8,25 +8,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+/* ========== RESET & SMOOTH SCROLL ========== */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+/* ========== GENEL ========== */
 body{
   font-family:Inter,Arial,sans-serif;
   background:#050914;
   color:#e5e7eb;
-  line-height:1.6;
+  line-height:1.7;
 }
 
-/* NAVBAR */
+/* ========== HEADER ========== */
 header{
   position:sticky;
   top:0;
-  z-index:100;
-  background:rgba(5,9,20,.9);
+  z-index:1000;
+  background:rgba(5,9,20,.95);
   backdrop-filter:blur(10px);
   padding:20px 80px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 header strong{
   color:#38bdf8;
@@ -41,7 +46,7 @@ nav a{
 }
 nav a:hover{color:#38bdf8}
 
-/* SECTION GENEL */
+/* ========== SECTION GENEL ========== */
 section{
   width:100%;
   padding:120px 80px;
@@ -51,7 +56,7 @@ section{
   margin:auto;
 }
 
-/* HERO */
+/* ========== HERO ========== */
 .hero{
   background:radial-gradient(ellipse at top,#0b1b3a 0%,#050914 70%);
 }
@@ -66,7 +71,18 @@ section{
   color:#cbd5f5;
 }
 
-/* KART GRID */
+/* ========== BAŞLIKLAR ========== */
+.section-title{
+  font-size:42px;
+  margin-bottom:20px;
+}
+.section-desc{
+  max-width:900px;
+  font-size:18px;
+  color:#cbd5f5;
+}
+
+/* ========== GRID & CARD ========== */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -89,26 +105,15 @@ section{
   margin-bottom:15px;
 }
 
-/* BAŞLIKLAR */
-.section-title{
-  font-size:42px;
-  margin-bottom:20px;
-}
-.section-desc{
-  max-width:800px;
-  color:#cbd5f5;
-  font-size:18px;
+/* ========== ALT ARKA PLAN ========== */
+.alt{
+  background:#070c1e;
 }
 
-/* PROJELER */
-.project{
-  background:linear-gradient(135deg,#0b1b3a,#050914);
-}
-
-/* FOOTER */
+/* ========== FOOTER ========== */
 footer{
   background:#030712;
-  padding:60px 80px;
+  padding:70px 80px;
   text-align:center;
   border-top:1px solid rgba(255,255,255,.06);
 }
@@ -123,10 +128,10 @@ footer p{
   color:#94a3b8;
 }
 
-/* MOBİL */
+/* ========== MOBİL ========== */
 @media(max-width:768px){
   header{padding:20px}
-  section{padding:80px 20px}
+  section{padding:90px 20px}
   .hero h1{font-size:38px}
 }
 </style>
@@ -145,52 +150,52 @@ footer p{
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- ANA SAYFA -->
 <section id="anasayfa" class="hero">
   <div class="container">
-    <h1>Dijital Dönüşümde Güvenilir Teknoloji Ortağınız</h1>
+    <h1>Dijital Dönüşümde Güvenilir<br>Teknoloji Ortağınız</h1>
     <p>
       RAN Teknoloji; yazılım, danışmanlık ve kurumsal IT çözümleriyle
-      işletmelerin dijital geleceğini inşa eder.
+      işletmelerin dijital geleceğini planlar, geliştirir ve yönetir.
     </p>
 
     <div class="grid">
       <div class="card">
         <h3>Yazılım & Dijital</h3>
-        <p>Web, mobil ve özel yazılım projeleriyle markaları dijitalde güçlendiriyoruz.</p>
+        <p>Web, mobil ve özel yazılım projeleriyle markaları dijital dünyada güçlendiriyoruz.</p>
       </div>
       <div class="card">
         <h3>Teknoloji Danışmanlığı</h3>
-        <p>Dijital dönüşüm, BT stratejisi ve süreç optimizasyonu.</p>
+        <p>Dijital dönüşüm, BT stratejisi ve süreç iyileştirme hizmetleri sunuyoruz.</p>
       </div>
       <div class="card">
         <h3>Kurumsal IT</h3>
-        <p>Altyapı, entegrasyon, sistem yönetimi ve güvenlik çözümleri.</p>
+        <p>Altyapı, güvenlik, sistem yönetimi ve entegrasyon çözümleri sağlıyoruz.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- KURUMSAL -->
-<section id="kurumsal">
+<section id="kurumsal" class="alt">
   <div class="container">
     <h2 class="section-title">Biz Kimiz?</h2>
     <p class="section-desc">
-      Teknolojiyi sadece bir araç değil, kurumsal başarıyı büyüten stratejik bir güç olarak görüyoruz.
-      Bugünü çözerken yarını planlayan sürdürülebilir sistemler kuruyoruz.
+      Teknolojiyi sadece bir araç değil, kurumsal başarının temel yapı taşı olarak görüyoruz.
+      Bugünü çözerken yarını planlayan, sürdürülebilir sistemler kuruyoruz.
     </p>
 
     <div class="grid">
       <div class="card">
-        <h3>Vizyonumuz</h3>
+        <h3>Vizyon</h3>
         <p>Teknolojiyi gerçek değer üreten çözümlere dönüştürmek.</p>
       </div>
       <div class="card">
-        <h3>Misyonumuz</h3>
-        <p>Kurumsal müşterilerle uzun vadeli, güvene dayalı iş ortaklıkları kurmak.</p>
+        <h3>Misyon</h3>
+        <p>Kurumsal firmalar için güvenilir ve ölçeklenebilir çözümler üretmek.</p>
       </div>
       <div class="card">
-        <h3>Değerlerimiz</h3>
+        <h3>Değerler</h3>
         <p>Güven, şeffaflık, kalite ve sürdürülebilirlik.</p>
       </div>
     </div>
@@ -208,7 +213,7 @@ footer p{
     <div class="grid">
       <div class="card">
         <h3>Kurumsal Web Siteleri</h3>
-        <p>Hızlı, güvenli ve markaya özel web çözümleri.</p>
+        <p>Markaya özel, hızlı ve güvenli web çözümleri.</p>
       </div>
       <div class="card">
         <h3>Dijital Dönüşüm</h3>
@@ -216,14 +221,14 @@ footer p{
       </div>
       <div class="card">
         <h3>IT Altyapı</h3>
-        <p>Sunucu, ağ, güvenlik ve sistem yönetimi.</p>
+        <p>Sunucu, ağ, güvenlik ve sistem yönetimi hizmetleri.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PROJELER -->
-<section id="projeler" class="project">
+<section id="projeler" class="alt">
   <div class="container">
     <h2 class="section-title">Projeler</h2>
     <p class="section-desc">
@@ -233,25 +238,50 @@ footer p{
     <div class="grid">
       <div class="card">
         <h3>Kurumsal Web Platformu</h3>
-        <p>Ölçeklenebilir ve yüksek performanslı yapı.</p>
+        <p>Ölçeklenebilir, performans odaklı web altyapıları.</p>
       </div>
       <div class="card">
-        <h3>Dijital Yönetim Sistemi</h3>
-        <p>Operasyonel verimliliği artıran çözümler.</p>
+        <h3>Dijital Yönetim Sistemleri</h3>
+        <p>Operasyonel verimliliği artıran özel yazılımlar.</p>
       </div>
       <div class="card">
         <h3>IT Altyapı Kurulumu</h3>
-        <p>Uçtan uca sistem entegrasyonu.</p>
+        <p>Uçtan uca sistem ve ağ çözümleri.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer id="iletisim">
-  <a href="#">WhatsApp</a>
-  <a href="#">Instagram</a>
-  <a href="#">05XX XXX XX XX</a>
+<!-- İLETİŞİM -->
+<section id="iletisim">
+  <div class="container">
+    <h2 class="section-title">İletişim</h2>
+    <p class="section-desc">
+      Projeleriniz ve iş birlikleri için bizimle iletişime geçebilirsiniz.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Telefon</h3>
+        <p>05XX XXX XX XX</p>
+      </div>
+      <div class="card">
+        <h3>WhatsApp</h3>
+        <p>05XX XXX XX XX</p>
+      </div>
+      <div class="card">
+        <h3>Instagram</h3>
+        <p>@ranteknoloji</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="#anasayfa">Ana Sayfa</a>
+  <a href="#kurumsal">Kurumsal</a>
+  <a href="#hizmetler">Hizmetler</a>
+  <a href="#projeler">Projeler</a>
   <p>© 2026 RAN Teknoloji</p>
 </footer>
 
