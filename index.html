@@ -5,138 +5,129 @@
 <title>RAN Teknoloji</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-  font-family:'Inter',sans-serif;
-  background:#050812;
-  color:#ffffff;
+  font-family:Inter,Arial,sans-serif;
+  background:#050914;
+  color:#e5e7eb;
+  line-height:1.6;
 }
 
-/* HEADER */
+/* NAVBAR */
 header{
-  position:fixed;
-  top:0;left:0;right:0;
-  background:rgba(5,8,18,.96);
-  border-bottom:1px solid rgba(255,255,255,.08);
-  padding:20px 60px;
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(5,9,20,.9);
+  backdrop-filter:blur(10px);
+  padding:20px 80px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  z-index:1000;
 }
 header strong{
-  color:#3ea6ff;
-  letter-spacing:1px;
+  color:#38bdf8;
   font-size:18px;
+  letter-spacing:.5px;
 }
 nav a{
+  color:#cbd5f5;
   margin-left:30px;
-  color:#ffffff;
   text-decoration:none;
-  font-size:15px;
-  opacity:.85;
+  font-weight:500;
 }
-nav a:hover{
-  opacity:1;
-  color:#3ea6ff;
-}
+nav a:hover{color:#38bdf8}
 
-/* SECTIONS */
+/* SECTION GENEL */
 section{
+  width:100%;
   padding:120px 80px;
+}
+.container{
   max-width:1400px;
   margin:auto;
 }
-section.dark{
-  background:#050812;
-}
-section.alt{
-  background:#070c1e;
-}
 
-h1{
-  font-size:54px;
-  line-height:1.2;
-  margin-bottom:30px;
+/* HERO */
+.hero{
+  background:radial-gradient(ellipse at top,#0b1b3a 0%,#050914 70%);
 }
-h2{
-  font-size:38px;
+.hero h1{
+  font-size:56px;
+  max-width:900px;
   margin-bottom:25px;
 }
-h3{
-  font-size:22px;
-  margin-bottom:15px;
-}
-p{
-  font-size:18px;
-  line-height:1.9;
-  color:#d0d6e4;
-  max-width:1000px;
+.hero p{
+  font-size:20px;
+  max-width:800px;
+  color:#cbd5f5;
 }
 
-/* GRID */
+/* KART GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:40px;
+  gap:30px;
   margin-top:60px;
 }
 .card{
   background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:16px;
-  padding:35px;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:18px;
+  padding:30px;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#38bdf8;
 }
 .card h3{
-  color:#3ea6ff;
-}
-
-/* HERO */
-#hero{
-  padding-top:200px;
-  padding-bottom:180px;
-  background:radial-gradient(circle at top,#0b1c4d,#050812 70%);
-}
-
-/* LIST */
-.list{
-  margin-top:40px;
-}
-.list p{
+  color:#38bdf8;
   margin-bottom:15px;
+}
+
+/* BAŞLIKLAR */
+.section-title{
+  font-size:42px;
+  margin-bottom:20px;
+}
+.section-desc{
+  max-width:800px;
+  color:#cbd5f5;
+  font-size:18px;
+}
+
+/* PROJELER */
+.project{
+  background:linear-gradient(135deg,#0b1b3a,#050914);
 }
 
 /* FOOTER */
 footer{
-  background:#03050c;
-  padding:80px 40px;
+  background:#030712;
+  padding:60px 80px;
   text-align:center;
-  border-top:1px solid rgba(255,255,255,.08);
+  border-top:1px solid rgba(255,255,255,.06);
+}
+footer a{
+  color:#38bdf8;
+  text-decoration:none;
+  margin:0 15px;
 }
 footer p{
+  margin-top:20px;
   font-size:14px;
-  color:#9aa3bd;
-}
-.contact{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-  margin-bottom:25px;
-}
-.contact span b{
-  color:#3ea6ff;
+  color:#94a3b8;
 }
 
+/* MOBİL */
 @media(max-width:768px){
-  header{padding:18px 25px}
-  section{padding:100px 25px}
-  h1{font-size:40px}
+  header{padding:20px}
+  section{padding:80px 20px}
+  .hero h1{font-size:38px}
 }
 </style>
 </head>
@@ -146,7 +137,7 @@ footer p{
 <header>
   <strong>RAN TEKNOLOJİ</strong>
   <nav>
-    <a href="#hero">Ana Sayfa</a>
+    <a href="#anasayfa">Ana Sayfa</a>
     <a href="#kurumsal">Kurumsal</a>
     <a href="#hizmetler">Hizmetler</a>
     <a href="#projeler">Projeler</a>
@@ -155,133 +146,113 @@ footer p{
 </header>
 
 <!-- HERO -->
-<section id="hero" class="dark">
-  <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
-  <p>
-    RAN Teknoloji; kurumların dijital çağda daha verimli, daha güvenli ve
-    daha sürdürülebilir şekilde büyüyebilmesi için yazılım, danışmanlık
-    ve kurumsal IT çözümleri geliştirir.
-  </p>
+<section id="anasayfa" class="hero">
+  <div class="container">
+    <h1>Dijital Dönüşümde Güvenilir Teknoloji Ortağınız</h1>
+    <p>
+      RAN Teknoloji; yazılım, danışmanlık ve kurumsal IT çözümleriyle
+      işletmelerin dijital geleceğini inşa eder.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Yazılım & Dijital</h3>
+        <p>Web, mobil ve özel yazılım projeleriyle markaları dijitalde güçlendiriyoruz.</p>
+      </div>
+      <div class="card">
+        <h3>Teknoloji Danışmanlığı</h3>
+        <p>Dijital dönüşüm, BT stratejisi ve süreç optimizasyonu.</p>
+      </div>
+      <div class="card">
+        <h3>Kurumsal IT</h3>
+        <p>Altyapı, entegrasyon, sistem yönetimi ve güvenlik çözümleri.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- KURUMSAL -->
-<section id="kurumsal" class="alt">
-  <h2>Biz Kimiz?</h2>
-  <p>
-    RAN Teknoloji, teknolojiyi yalnızca bir araç olarak değil,
-    kurumsal başarıyı destekleyen stratejik bir güç olarak ele alır.
-    İş ortaklarının ihtiyaçlarını doğru analiz eder, bugünü çözerken
-    yarını da planlayan sistemler kurar.
-  </p>
+<section id="kurumsal">
+  <div class="container">
+    <h2 class="section-title">Biz Kimiz?</h2>
+    <p class="section-desc">
+      Teknolojiyi sadece bir araç değil, kurumsal başarıyı büyüten stratejik bir güç olarak görüyoruz.
+      Bugünü çözerken yarını planlayan sürdürülebilir sistemler kuruyoruz.
+    </p>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Vizyonumuz</h3>
-      <p>
-        Teknolojiyi iş dünyasında gerçek değer üreten, sürdürülebilir
-        çözümlere dönüştürmek.
-      </p>
-    </div>
-    <div class="card">
-      <h3>Misyonumuz</h3>
-      <p>
-        Kurumlara özel, güvenilir ve ölçeklenebilir teknoloji çözümleri
-        geliştirerek uzun vadeli iş ortaklıkları kurmak.
-      </p>
-    </div>
-    <div class="card">
-      <h3>Değerlerimiz</h3>
-      <p>
-        Güven, şeffaflık, kalite, süreklilik ve sorumluluk bilinci.
-      </p>
+    <div class="grid">
+      <div class="card">
+        <h3>Vizyonumuz</h3>
+        <p>Teknolojiyi gerçek değer üreten çözümlere dönüştürmek.</p>
+      </div>
+      <div class="card">
+        <h3>Misyonumuz</h3>
+        <p>Kurumsal müşterilerle uzun vadeli, güvene dayalı iş ortaklıkları kurmak.</p>
+      </div>
+      <div class="card">
+        <h3>Değerlerimiz</h3>
+        <p>Güven, şeffaflık, kalite ve sürdürülebilirlik.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- HİZMETLER -->
-<section id="hizmetler" class="dark">
-  <h2>Hizmetlerimiz</h2>
-  <p>
-    RAN Teknoloji, uçtan uca teknoloji hizmetleri sunarak kurumların
-    dijital dönüşüm yolculuğunda tüm ihtiyaçlarını tek çatı altında karşılar.
-  </p>
+<section id="hizmetler">
+  <div class="container">
+    <h2 class="section-title">Hizmetlerimiz</h2>
+    <p class="section-desc">
+      Uçtan uca teknoloji çözümleriyle iş süreçlerinizi güçlendiriyoruz.
+    </p>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Yazılım & Dijital Çözümler</h3>
-      <p>
-        Kurumsal web siteleri, özel yazılım projeleri, yönetim panelleri
-        ve dijital platformlar geliştiriyoruz.
-      </p>
-    </div>
-    <div class="card">
-      <h3>Teknoloji Danışmanlığı</h3>
-      <p>
-        Dijital dönüşüm stratejileri, sistem analizi, teknoloji yol haritası
-        ve süreç optimizasyonu hizmetleri sunuyoruz.
-      </p>
-    </div>
-    <div class="card">
-      <h3>Kurumsal IT & Altyapı</h3>
-      <p>
-        Sunucu, ağ, güvenlik, entegrasyon ve kurumsal BT yönetimi
-        çözümleri sağlıyoruz.
-      </p>
+    <div class="grid">
+      <div class="card">
+        <h3>Kurumsal Web Siteleri</h3>
+        <p>Hızlı, güvenli ve markaya özel web çözümleri.</p>
+      </div>
+      <div class="card">
+        <h3>Dijital Dönüşüm</h3>
+        <p>İş süreçlerini teknolojiyle optimize eden projeler.</p>
+      </div>
+      <div class="card">
+        <h3>IT Altyapı</h3>
+        <p>Sunucu, ağ, güvenlik ve sistem yönetimi.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- PROJELER -->
-<section id="projeler" class="alt">
-  <h2>Projeler & Çözümler</h2>
-  <p>
-    Farklı sektörlerde edindiğimiz tecrübe ile kurumların ihtiyaçlarına
-    özel projeler geliştiriyor, sürdürülebilir sonuçlar üretiyoruz.
-  </p>
+<section id="projeler" class="project">
+  <div class="container">
+    <h2 class="section-title">Projeler</h2>
+    <p class="section-desc">
+      Farklı sektörlerde hayata geçirdiğimiz seçili projeler.
+    </p>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Kurumsal Web Platformları</h3>
-      <p>
-        Marka kimliğine uygun, güvenli ve performans odaklı web projeleri.
-      </p>
-    </div>
-    <div class="card">
-      <h3>Dijital Dönüşüm Projeleri</h3>
-      <p>
-        İş süreçlerini teknolojiyle yeniden tasarlayan kapsamlı çözümler.
-      </p>
-    </div>
-    <div class="card">
-      <h3>IT Altyapı Kurulumları</h3>
-      <p>
-        Kurumsal sistemlerin uçtan uca planlanması ve hayata geçirilmesi.
-      </p>
+    <div class="grid">
+      <div class="card">
+        <h3>Kurumsal Web Platformu</h3>
+        <p>Ölçeklenebilir ve yüksek performanslı yapı.</p>
+      </div>
+      <div class="card">
+        <h3>Dijital Yönetim Sistemi</h3>
+        <p>Operasyonel verimliliği artıran çözümler.</p>
+      </div>
+      <div class="card">
+        <h3>IT Altyapı Kurulumu</h3>
+        <p>Uçtan uca sistem entegrasyonu.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- İLETİŞİM -->
-<section id="iletisim" class="dark">
-  <h2>İletişim</h2>
-  <p>
-    Projeleriniz ve iş birlikleri için bizimle iletişime geçebilirsiniz.
-  </p>
-
-  <div class="list">
-    <p>📞 <b>Telefon:</b> 05XX XXX XX XX</p>
-    <p>💬 <b>WhatsApp:</b> 05XX XXX XX XX</p>
-    <p>📸 <b>Instagram:</b> @ranteknoloji</p>
-    <p>✉️ <b>E-posta:</b> info@ranteknoloji.com</p>
-  </div>
-</section>
-
-<footer>
-  <div class="contact">
-    <span><b>RAN Teknoloji</b></span>
-    <span>Yazılım · Danışmanlık · Kurumsal IT</span>
-  </div>
-  <p>© 2026 RAN Teknoloji. Tüm hakları saklıdır.</p>
+<!-- FOOTER -->
+<footer id="iletisim">
+  <a href="#">WhatsApp</a>
+  <a href="#">Instagram</a>
+  <a href="#">05XX XXX XX XX</a>
+  <p>© 2026 RAN Teknoloji</p>
 </footer>
 
 </body>
