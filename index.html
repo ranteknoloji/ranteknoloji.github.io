@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>RAN Teknoloji</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,201 +11,253 @@
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
+      margin: 0;
       font-family: 'Inter', Arial, Helvetica, sans-serif;
-      background: #050816;
-      color: #eaeaf0;
+      background: linear-gradient(180deg, #020617 0%, #020b2d 100%);
+      color: #e5e7eb;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* HEADER */
     header {
-      height: 80px;
-      padding: 0 40px;
+      padding: 24px 48px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      background: linear-gradient(90deg, #050816, #0b1a3a);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     header strong {
-      color: #4da3ff;
       font-size: 18px;
-      letter-spacing: 0.6px;
+      color: #38bdf8;
+      letter-spacing: 0.5px;
     }
 
     nav a {
       margin-left: 24px;
-      font-size: 14px;
-      color: #dcdcff;
-      opacity: 0.9;
+      text-decoration: none;
+      color: #e5e7eb;
+      font-weight: 500;
+      font-size: 15px;
     }
 
     nav a:hover {
-      opacity: 1;
-      text-decoration: underline;
+      color: #38bdf8;
     }
 
-    /* HERO */
     .hero {
-      min-height: calc(100vh - 80px);
-      background: radial-gradient(circle at top left, #0b1a3a, #050816 65%);
-      display: flex;
-      align-items: center;
-    }
-
-    .hero-inner {
-      max-width: 1100px;
-      padding: 80px 40px 60px;
+      padding: 120px 48px 80px;
+      max-width: 1200px;
       margin: auto;
     }
 
-    h1 {
-      font-size: 46px;
+    .hero h1 {
+      font-size: 48px;
       line-height: 1.2;
-      margin-bottom: 20px;
-      color: #ffffff;
+      margin-bottom: 24px;
     }
 
     .hero p {
       font-size: 18px;
       line-height: 1.7;
+      color: #cbd5f5;
       max-width: 720px;
-      color: #cfd6ff;
     }
 
-    /* CARDS */
     .cards {
+      margin-top: 80px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      margin-top: 50px;
+      gap: 32px;
     }
 
     .card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 14px;
-      padding: 24px;
-      transition: all 0.25s ease;
+      padding: 28px;
+      transition: all 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-6px);
-      border-color: rgba(77,163,255,0.4);
+      border-color: #38bdf8;
     }
 
     .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #38bdf8;
       font-size: 18px;
-      margin-bottom: 10px;
-      color: #4da3ff;
     }
 
     .card p {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.6;
-      color: #d0d6ff;
+      color: #d1d5f0;
     }
 
-    /* FOOTER */
-    footer {
-      background: #050816;
-      border-top: 1px solid rgba(255,255,255,0.06);
+    .why {
+      max-width: 1200px;
+      margin: 120px auto 0;
+      padding: 0 48px;
+    }
+
+    .why h2 {
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
+
+    .why-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+
+    .why-item {
+      padding: 24px;
+      background: rgba(255,255,255,0.02);
+      border-left: 4px solid #38bdf8;
+      border-radius: 8px;
+    }
+
+    .why-item h4 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .why-item p {
+      margin: 0;
+      font-size: 15px;
+      color: #cbd5f5;
+      line-height: 1.6;
+    }
+
+    .cta {
+      margin: 120px auto;
+      padding: 64px 48px;
+      max-width: 1200px;
+      background: linear-gradient(135deg, #020617, #020b2d);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
       text-align: center;
-      padding: 30px 20px 24px;
+    }
+
+    .cta h2 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      font-size: 17px;
+      color: #cbd5f5;
+      margin-bottom: 32px;
+    }
+
+    .cta-links a {
+      display: inline-block;
+      margin: 0 12px;
+      padding: 14px 28px;
+      border-radius: 30px;
+      background: #38bdf8;
+      color: #020617;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .cta-links a.secondary {
+      background: transparent;
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 48px 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
       font-size: 14px;
-      color: #9aa4d8;
+      color: #9ca3af;
     }
 
-    .footer-links {
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 26px;
-      flex-wrap: wrap;
+    footer .contact {
+      margin-top: 16px;
       font-size: 14px;
-    }
-
-    .footer-links span {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      cursor: default;
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 36px;
-      }
-
-      header {
-        padding: 0 20px;
-      }
-
-      .hero-inner {
-        padding: 60px 20px;
-      }
+      color: #cbd5f5;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <strong>RAN TEKNOLOJİ</strong>
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="kurumsal.html">Kurumsal</a>
-      <a href="faaliyet.html">Faaliyet Alanları</a>
-      <a href="projeler.html">Projeler</a>
-    </nav>
-  </header>
+<header>
+  <strong>RAN TEKNOLOJİ</strong>
+  <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="kurumsal.html">Kurumsal</a>
+    <a href="faaliyet.html">Faaliyet Alanları</a>
+    <a href="projeler.html">Projeler</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
-      <p>
-        RAN Teknoloji; yenilikçi, güvenilir ve sürdürülebilir teknoloji çözümleri geliştirerek
-        işletmelerin dijital dönüşümüne güç katar.
-      </p>
+<section class="hero">
+  <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
+  <p>
+    RAN Teknoloji; yenilikçi, güvenilir ve sürdürülebilir teknoloji çözümleri geliştirerek
+    işletmelerin dijital dönüşümüne değer katar.
+  </p>
 
-      <div class="cards">
-        <div class="card">
-          <h3>Yazılım & Dijital</h3>
-          <p>Modern, ölçeklenebilir ve güvenli yazılım çözümleri ile işinizi geleceğe taşıyoruz.</p>
-        </div>
-
-        <div class="card">
-          <h3>Teknoloji Danışmanlığı</h3>
-          <p>İş süreçlerinizi analiz eder, teknolojiyle optimize eder ve verimliliği artırırız.</p>
-        </div>
-
-        <div class="card">
-          <h3>Kurumsal IT</h3>
-          <p>Altyapı, entegrasyon ve kurumsal sistem çözümleriyle uçtan uca destek sağlarız.</p>
-        </div>
-      </div>
+  <div class="cards">
+    <div class="card">
+      <h3>Yazılım & Dijital</h3>
+      <p>Modern, ölçeklenebilir ve güvenli yazılım çözümleriyle işinizi geleceğe taşıyoruz.</p>
     </div>
-  </section>
-
-  <footer>
-    © 2026 RAN Teknoloji
-    <div class="footer-links">
-      <span>WhatsApp</span>
-      <span>Instagram</span>
-      <span>📞 05XX XXX XX XX</span>
+    <div class="card">
+      <h3>Teknoloji Danışmanlığı</h3>
+      <p>İş süreçlerinizi analiz eder, teknolojiyle optimize eder ve verimliliği artırırız.</p>
     </div>
-  </footer>
+    <div class="card">
+      <h3>Kurumsal IT</h3>
+      <p>Altyapı, entegrasyon ve kurumsal sistem çözümleriyle uçtan uca destek sağlarız.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <h2>Neden RAN Teknoloji?</h2>
+  <div class="why-list">
+    <div class="why-item">
+      <h4>Stratejik Yaklaşım</h4>
+      <p>Teknolojiyi sadece araç değil, iş hedeflerine ulaşmanın anahtarı olarak görürüz.</p>
+    </div>
+    <div class="why-item">
+      <h4>Güven & Şeffaflık</h4>
+      <p>Tüm süreçlerde açık iletişim, güvenilir altyapı ve sürdürülebilir çözümler sunarız.</p>
+    </div>
+    <div class="why-item">
+      <h4>Uzun Vadeli İş Ortaklığı</h4>
+      <p>Kısa vadeli çözümler değil, kalıcı ve ölçeklenebilir sistemler geliştiririz.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Bizimle İletişime Geçin</h2>
+  <p>İşletmeniz için doğru teknoloji çözümlerini birlikte planlayalım.</p>
+  <div class="cta-links">
+    <a href="#">WhatsApp</a>
+    <a href="#" class="secondary">Instagram</a>
+    <a href="tel:05XXXXXXXX" class="secondary">05XX XXX XX XX</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 RAN Teknoloji
+  <div class="contact">
+    WhatsApp • Instagram • 05XX XXX XX XX
+  </div>
+</footer>
 
 </body>
 </html>
