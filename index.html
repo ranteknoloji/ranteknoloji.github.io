@@ -1,196 +1,70 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>RAN Teknoloji</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>RAN Teknoloji</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Inter,Arial;
+  background:#020617;
+  color:#e5e7eb;
+  transition:opacity .3s ease;
+}
+header{
+  height:80px;
+  padding:0 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+header strong{color:#38bdf8;letter-spacing:.5px}
+nav a{margin-left:24px;color:#e5e7eb;text-decoration:none}
+nav a:hover{color:#38bdf8}
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+.page{animation:fade .6s ease forwards}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 
-    body {
-      margin: 0;
-      font-family: 'Inter', Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #020617 0%, #020b2d 100%);
-      color: #e5e7eb;
-    }
+.hero{
+  min-height:calc(100vh - 80px);
+  padding:100px 40px;
+  background:radial-gradient(circle at top,#0b1a3a,#020617 70%);
+}
+.hero-inner{max-width:1100px;margin:auto}
+h1{font-size:46px;margin-bottom:20px}
+.hero p{max-width:720px;color:#cbd5f5;font-size:18px;line-height:1.7}
 
-    header {
-      padding: 24px 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
+.cards{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px
+}
+.card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  padding:24px;
+  transition:.3s
+}
+.card:hover{transform:translateY(-6px);border-color:#38bdf8}
+.card h3{color:#38bdf8;margin-bottom:10px}
+.card p{color:#d1d5f0;font-size:15px;line-height:1.6}
 
-    header strong {
-      font-size: 18px;
-      color: #38bdf8;
-      letter-spacing: 0.5px;
-    }
-
-    nav a {
-      margin-left: 24px;
-      text-decoration: none;
-      color: #e5e7eb;
-      font-weight: 500;
-      font-size: 15px;
-    }
-
-    nav a:hover {
-      color: #38bdf8;
-    }
-
-    .hero {
-      padding: 120px 48px 80px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      line-height: 1.2;
-      margin-bottom: 24px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #cbd5f5;
-      max-width: 720px;
-    }
-
-    .cards {
-      margin-top: 80px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px;
-      padding: 28px;
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: #38bdf8;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      color: #38bdf8;
-      font-size: 18px;
-    }
-
-    .card p {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #d1d5f0;
-    }
-
-    .why {
-      max-width: 1200px;
-      margin: 120px auto 0;
-      padding: 0 48px;
-    }
-
-    .why h2 {
-      font-size: 32px;
-      margin-bottom: 32px;
-    }
-
-    .why-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-    }
-
-    .why-item {
-      padding: 24px;
-      background: rgba(255,255,255,0.02);
-      border-left: 4px solid #38bdf8;
-      border-radius: 8px;
-    }
-
-    .why-item h4 {
-      margin: 0 0 8px;
-      font-size: 17px;
-    }
-
-    .why-item p {
-      margin: 0;
-      font-size: 15px;
-      color: #cbd5f5;
-      line-height: 1.6;
-    }
-
-    .cta {
-      margin: 120px auto;
-      padding: 64px 48px;
-      max-width: 1200px;
-      background: linear-gradient(135deg, #020617, #020b2d);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: 32px;
-      margin-bottom: 16px;
-    }
-
-    .cta p {
-      font-size: 17px;
-      color: #cbd5f5;
-      margin-bottom: 32px;
-    }
-
-    .cta-links a {
-      display: inline-block;
-      margin: 0 12px;
-      padding: 14px 28px;
-      border-radius: 30px;
-      background: #38bdf8;
-      color: #020617;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 15px;
-    }
-
-    .cta-links a.secondary {
-      background: transparent;
-      border: 1px solid #38bdf8;
-      color: #38bdf8;
-    }
-
-    footer {
-      text-align: center;
-      padding: 48px 20px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      font-size: 14px;
-      color: #9ca3af;
-    }
-
-    footer .contact {
-      margin-top: 16px;
-      font-size: 14px;
-      color: #cbd5f5;
-    }
-  </style>
+footer{
+  text-align:center;
+  padding:40px 20px;
+  border-top:1px solid rgba(255,255,255,.08);
+  color:#9ca3af
+}
+</style>
 </head>
 
 <body>
-
 <header>
   <strong>RAN TEKNOLOJİ</strong>
   <nav>
@@ -201,63 +75,34 @@
   </nav>
 </header>
 
+<div class="page">
 <section class="hero">
-  <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
-  <p>
-    RAN Teknoloji; yenilikçi, güvenilir ve sürdürülebilir teknoloji çözümleri geliştirerek
-    işletmelerin dijital dönüşümüne değer katar.
-  </p>
+  <div class="hero-inner">
+    <h1>Dijital Dönüşümde<br>Güvenilir Teknoloji Ortağınız</h1>
+    <p>RAN Teknoloji, işletmelerin dijital dönüşüm süreçlerinde güvenilir ve sürdürülebilir çözümler sunar.</p>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Yazılım & Dijital</h3>
-      <p>Modern, ölçeklenebilir ve güvenli yazılım çözümleriyle işinizi geleceğe taşıyoruz.</p>
-    </div>
-    <div class="card">
-      <h3>Teknoloji Danışmanlığı</h3>
-      <p>İş süreçlerinizi analiz eder, teknolojiyle optimize eder ve verimliliği artırırız.</p>
-    </div>
-    <div class="card">
-      <h3>Kurumsal IT</h3>
-      <p>Altyapı, entegrasyon ve kurumsal sistem çözümleriyle uçtan uca destek sağlarız.</p>
+    <div class="cards">
+      <div class="card"><h3>Yazılım & Dijital</h3><p>Modern ve ölçeklenebilir yazılım çözümleri.</p></div>
+      <div class="card"><h3>Teknoloji Danışmanlığı</h3><p>Dijital dönüşüm ve BT stratejileri.</p></div>
+      <div class="card"><h3>Kurumsal IT</h3><p>Altyapı ve entegrasyon çözümleri.</p></div>
     </div>
   </div>
 </section>
+</div>
 
-<section class="why">
-  <h2>Neden RAN Teknoloji?</h2>
-  <div class="why-list">
-    <div class="why-item">
-      <h4>Stratejik Yaklaşım</h4>
-      <p>Teknolojiyi sadece araç değil, iş hedeflerine ulaşmanın anahtarı olarak görürüz.</p>
-    </div>
-    <div class="why-item">
-      <h4>Güven & Şeffaflık</h4>
-      <p>Tüm süreçlerde açık iletişim, güvenilir altyapı ve sürdürülebilir çözümler sunarız.</p>
-    </div>
-    <div class="why-item">
-      <h4>Uzun Vadeli İş Ortaklığı</h4>
-      <p>Kısa vadeli çözümler değil, kalıcı ve ölçeklenebilir sistemler geliştiririz.</p>
-    </div>
-  </div>
-</section>
+<footer>© 2026 RAN Teknoloji</footer>
 
-<section class="cta">
-  <h2>Bizimle İletişime Geçin</h2>
-  <p>İşletmeniz için doğru teknoloji çözümlerini birlikte planlayalım.</p>
-  <div class="cta-links">
-    <a href="#">WhatsApp</a>
-    <a href="#" class="secondary">Instagram</a>
-    <a href="tel:05XXXXXXXX" class="secondary">05XX XXX XX XX</a>
-  </div>
-</section>
-
-<footer>
-  © 2026 RAN Teknoloji
-  <div class="contact">
-    WhatsApp • Instagram • 05XX XXX XX XX
-  </div>
-</footer>
-
+<script>
+document.querySelectorAll("a").forEach(link=>{
+  link.addEventListener("click",e=>{
+    const h=link.getAttribute("href");
+    if(h&&h.endsWith(".html")){
+      e.preventDefault();
+      document.body.style.opacity="0";
+      setTimeout(()=>location.href=h,200);
+    }
+  });
+});
+</script>
 </body>
 </html>
